@@ -1,1 +1,9 @@
-josemora.cl
+# Verifica que el CNAME esté correcto
+cat CNAME
+# Debe decir solo: josemora.cl
+
+# Si dice www.josemora.cl, cámbialo:
+echo "josemora.cl" > CNAME
+git add CNAME
+git commit -m "Fix domain"
+git push
